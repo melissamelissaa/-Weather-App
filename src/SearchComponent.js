@@ -3,6 +3,7 @@ import { useContext } from "react";
 
 const SearchComponent = () => {
   const value = useContext(AppContext);
+  
   if(value.isClicked === true) {
   return (
     <div>

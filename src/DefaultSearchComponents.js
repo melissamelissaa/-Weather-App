@@ -1,8 +1,8 @@
 import { AppContext } from "./App";
 import { useContext } from "react";
+
 const DefaultSearchComponents = () => {
   const value = useContext(AppContext);
-  console.log(value);
   if (value.isClicked === false) {
     return (
       <div>
