@@ -32,14 +32,12 @@ function App() {
   const URL = `http://api.weatherapi.com/v1/forecast.json?key=cd69bc61249f49c0b96190446231804&q=${input}&days=6&aqi=no&alerts=no`;
   useEffect(() => {
     axios.get(URL).then((res) => {
-      console.log(res.data);
       setDefaultData(res.data);
     });
   }, []);
 
   const getData = () => {
     axios.get(URL).then((res) => {
-      console.log(res.data);
       setDefaultData(res.data);
     });
   };
@@ -57,6 +55,7 @@ function App() {
         <DefaultSearchComponents />
         <SearchComponent />
         <ExpectedWeatherComponent />
+        <HightlightComponent />
       </AppContext.Provider>
     </div>
   );
