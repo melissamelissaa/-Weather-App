@@ -1,15 +1,15 @@
-import { AppContext } from "./App";
+import { AppContext } from "../App";
 import { useContext } from "react";
 
 // forecast5Data.defaultData.forecast.forecastday[0].day.condition.icon
 const ExpectedWeatherCard = (props) => {
   return (
-    <div>
-      <h2>{props.date}</h2>
-      <img src={props.img} />
-      <div>
-        <p>{props.avgTempC}</p>
-        <p>{props.avgTempF}</p>
+    <div className="weatherForecastCard">
+      <h2 className="weatherForecasCard-date">{props.date}</h2>
+      <img className="weatherForecasCard-img" src={props.img} />
+      <div className="weatherForecastCard-tempContainer">
+        <p className="weatherForecasCard-tempC">{props.avgTempC}&deg;C</p>
+        <p className="weatherForecasCard-tempF">{props.avgTempF}&deg;C</p>
       </div>
     </div>
   );
@@ -18,7 +18,7 @@ const ExpectedWeatherComponent = (props) => {
   const forecast5Data = useContext(AppContext);
 
   return (
-    <div>
+    <div className="weatherCardsDiv">
       {forecast5Data.defaultData.forecast.forecastday.map((s) => (
         <ExpectedWeatherCard
           img={s.day.condition.icon}

@@ -2,10 +2,10 @@ import "./App.css";
 import axios from "axios";
 import { useState, createContext, useEffect } from "react";
 
-import DefaultSearchComponents from "./DefaultSearchComponents";
-import SearchComponent from "./SearchComponent";
-import ExpectedWeatherComponent from "./ExpectedWeatherComponent";
-import HightlightComponent from "./HightlightComponent";
+import SearchComponents from "./Components/SearchComponents";
+import SearchComponent from "./Components/SearchComponent";
+import ExpectedWeatherComponent from "./Components/ExpectedWeatherComponent";
+import HightlightComponent from "./Components/HightlightComponent";
 
 export const AppContext = createContext();
 
@@ -52,7 +52,7 @@ function App() {
   return (
     <div className="App">
       <AppContext.Provider value={obj}>
-        <DefaultSearchComponents />
+        <SearchComponents />
         <SearchComponent />
         <ExpectedWeatherComponent />
         <HightlightComponent />

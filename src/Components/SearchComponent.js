@@ -1,4 +1,4 @@
-import { AppContext } from "./App";
+import { AppContext } from "../App";
 import { useContext } from "react";
 
 const SearchComponent = () => {
@@ -6,14 +6,19 @@ const SearchComponent = () => {
 
   if (value.isClicked === true) {
     return (
-      <div>
+      <div className="searchDiv">
         <input
+          className="searchDiv-input"
           type="text"
           placeholder="Search location"
           onChange={(e) => value.setInput(e.target.value)}
         ></input>
-        <button onClick={value.getData}>Search</button>
-        <p onClick={() => value.setIsClicked(false)}>x</p>
+        <button 
+        className="searchDiv-btn"
+        onClick={value.getData}>Search</button>
+        <p 
+        className="searchDiv-exit-btn"
+        onClick={() => value.setIsClicked(false)}>x</p>
       </div>
     );
   } else return null;
