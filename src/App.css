@@ -1,15 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Lato:wght@700&family=Libre+Baskerville:ital@1&family=Manrope:wght@800&family=Raleway:ital,wght@1,100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Lato:wght@700&family=Libre+Baskerville:ital@1&family=Manrope:wght@800&family=Raleway:ital,wght@1,100&family=Roboto:wght@300&display=swap");
 
-html,
-body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
 :root {
   --background-color: #021531;
   --color: #19254f;
+  --text-color: rgb(175, 175, 175);
 }
 
 body {
@@ -65,7 +60,6 @@ body {
 .searchDiv,
 .currentWeatherDiv {
   background-color: var(--color);
-  height: 100vh;
 }
 
 .hightlightsDiv,
@@ -75,6 +69,8 @@ body {
 
 .weatherForecastCard {
   background-color: var(--color);
+  width: 10rem;
+  align-items: center;
 }
 
 .weatherCardsDiv {
@@ -82,22 +78,10 @@ body {
   flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
-  /* margin: 3px; */
-  height: 100vh;
   margin: 3px 5% 3px 7%;
 }
-
-.weatherForecastCard {
-  display: flex;
-  flex-direction: column;
-  width: 10rem;
-  align-items: center;
-  /* margin-left: 4%; */
-}
-
 .weatherForecastCard-tempContainer {
   display: flex;
-  /* justify-content: space-between; */
   padding: 0 1rem 0 1rem;
   height: 2.5rem;
 }
@@ -110,7 +94,10 @@ body {
   width: 100px;
 }
 
-.hightlightsDiv {
+.hightlightsDiv,
+.weatherCardsDiv,
+.searchDiv,
+.currentWeatherDiv {
   height: 100vh;
 }
 
@@ -120,30 +107,65 @@ body {
 
 .hightlightDiv-card {
   background-color: var(--color);
-  height: 20vh;
+  height: 22vh;
   margin: 5% 10% 5% 10%;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
 .hightlightsDiv {
-  margin: 5rem 0;
-  /* padding-bottom: 10rem; */
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  margin: 5rem 1rem;
 }
 
 .hightlightDiv-card-number {
   font-size: 3rem;
-  padding: 0;
 }
 
 .hightlightDiv-card-text {
   font-size: 1.5rem;
-  /* margin: 0; */
+  /* margin-bottom: 1rem; */
+  margin-bottom: 0;
 }
+
+.hightlightDiv-card,
+.weatherForecastCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.searchDiv-input {
+margin-right: 5px;
+height: 1.5rem;
+width: 60%;
+border-radius: 4px;
+background-color: #021531;
+box-sizing: border-box;
+border: none;
+border-bottom: 2px solid var(--text-color);
+color: var(--text-color);
+}
+.searchDiv-btn {
+  height: 1.5rem;
+  border-radius: 4px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: none;
+
+}
+.searchDiv-exit-btn {
+  color: var(--text-color);
+  font-size: 1.9rem;
+  margin-bottom: 2.5rem;
+}
+/* .inputBtnDiv {
+  margin-left: 5rem;
+} */
+
 
 @media screen and (min-width: 600px) {
   .currentWeaterDiv-backgroundImg {
