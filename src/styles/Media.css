@@ -1,0 +1,63 @@
+@media screen and (min-width: 600px) {
+  .currentWeaterDiv-backgroundImg {
+    object-fit: fill;
+    height: 90%;
+  }
+}
+
+@media screen and (max-width: 382px) {
+  .weatherForecastCard {
+    width: 46%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .App {
+    display: flex;
+    height: 100vh;
+  }
+  .weatherForecas-hightlight-div {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .weatherForecastCard {
+    width: 15%;
+  }
+  .hightlightInner-div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .weatherCardsDiv {
+    height: 20vh;
+  }
+
+  .hightlightsDiv {
+    height: 10vh;
+    /* width: 100%; */
+  }
+  .hightlightDiv-card {
+    width: 30%;
+  }
+  .hightlightDiv-card-text {
+    font-size: 1rem;
+  }
+  .hightlightDiv-card-number {
+    font-size: 1.8rem;
+  }
+
+  .hightlightDiv-card {
+    height: 15vh;
+  }
+  .hightlightsDiv-text {
+    font-size: 2rem;
+  }
+  .currentWeaterDiv-backgroundImg {
+    width: 28%;
+    height: 30vh;
+  }
+  .searchDiv,
+  .currentWeatherDiv {
+    width: 25%;
+  }
+}

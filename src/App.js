@@ -1,4 +1,6 @@
-import "./App.css";
+import "./styles/App.css";
+import "./styles/Media.css";
+
 import axios from "axios";
 import { useState, createContext, useEffect } from "react";
 
@@ -54,8 +56,10 @@ function App() {
       <AppContext.Provider value={obj}>
         <SearchComponents />
         <SearchComponent />
-        <ExpectedWeatherComponent />
-        <HightlightComponent />
+        <div className="weatherForecas-hightlight-div">
+          <ExpectedWeatherComponent />
+          <HightlightComponent />
+        </div>
       </AppContext.Provider>
     </div>
   );
