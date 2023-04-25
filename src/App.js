@@ -50,7 +50,13 @@ function App() {
     setIsClicked,
     isClicked,
   };
-
+  if (Object.keys(defaultData.current.condition).length === 0) {
+    return (
+      <div class="spinner-border text-info" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    );
+  }
   return (
     <div className="App">
       <AppContext.Provider value={obj}>
